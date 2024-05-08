@@ -2,10 +2,10 @@
 # 1.&nbsp; Springboot Controller
 #### ✅ &nbsp; MapController
 - Naver Maps에 Marker로 표시하기 위해 주소값을 좌표값으로 변경 후 DB에 데이터 주입
-- 순서 : 공공데이터 API → Naver Geolocation API → DB저장
-- 공공데이터 API 업데이트에 따라 맵에 표시되는 데이터도 다르므로, DB데이터보다 상시 요청이 더 낫다 판단하여 상시 API 데이터 요청.
-- request& response 로직 : Frontend(React)에서 현재 좌표값 요청시 Backend(Springboot)에서 내 근처 7km 이내 은행 대기인원 현황으로 응답.
-- servicekey : application.properties 로 관리.
+- 순서: 공공데이터 API → Naver Geolocation API → DB저장 <br>
+    🟢 공공데이터 API 업데이트에 따라 맵에 표시되는 데이터도 다르므로, DB데이터보다 상시 요청이 더 낫다 판단하여 상시 API 데이터 요청.
+- request & response : Frontend(React)에서 현재 좌표값 요청시 Backend(Springboot)에서 내 근처 7km 이내 은행 대기인원 현황으로 응답.
+- key : application.properties 로 관리.
 
 ```java
 package com.web.controller;
@@ -437,7 +437,7 @@ public class NoticeController {
 - USER : QnA등록, 본인이 작성한 글만 삭제 가능.
 - ADMIN : QnA등록, 모든 사람이 작성한 글 삭제 가능.
 
-```
+```java
 package com.web.controller;
 
 import com.web.repo.Notice;
