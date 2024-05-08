@@ -1,11 +1,5 @@
 
-# 1.&nbsp; 프로젝트 개발결과
-
-### 1-1 플로우 차트
-![bank_flow drawio](https://github.com/pangyosim/pizzapr0ject/assets/87213815/dc5f8176-bedd-46e7-9371-4575eab2ea02)
-
-### 1-2 Springboot Controller
-
+# 1.&nbsp; Springboot Controller
 #### ✅ &nbsp; MapController
 - Naver Maps에 Marker로 표시하기 위해 주소값을 좌표값으로 변경 후 DB에 데이터 주입
 - 순서 : 공공데이터 API → Naver Geolocation API → DB저장
