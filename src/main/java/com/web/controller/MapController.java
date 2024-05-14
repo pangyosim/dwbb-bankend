@@ -28,7 +28,7 @@ import java.nio.charset.StandardCharsets;
 import java.lang.*;
 import java.util.List;
 
-//@CrossOrigin("https://www.dwbb.online/")
+@CrossOrigin("https://www.dwbb.online/")
 @RestController
 @PropertySource("classpath:application.properties")
 public class MapController {

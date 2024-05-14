@@ -5,14 +5,19 @@ import com.web.service.UserService;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 import com.web.repo.*;
 @CrossOrigin("https://www.dwbb.online/")
 @RestController
+@PropertySource("classpath:application.properties")
 public class UserController {
-    private final String securityKey = "myjwtkey";
+
+    @Value("${user.jwtkey}")
+    private String securityKey;
     private final Long expiredTime = 1000 * 60L * 60L * 3L;
     private final UserService us;
     private final MailService ms;
