@@ -28,7 +28,7 @@ import java.nio.charset.StandardCharsets;
 import java.lang.*;
 import java.util.List;
 
-@CrossOrigin("https://dwbb.vercel.app/")
+//@CrossOrigin("https://www.dwbb.online/")
 @RestController
 @PropertySource("classpath:application.properties")
 public class MapController {

@@ -28,5 +28,10 @@ public class QnAServiceImpl implements QnAService{
     public void qnaRegister(QnA qna) {qar.save(qna);}
 
     @Override
+    public int updatecommentsByseq(Long seq, String comments) {
+        return qar.updatecommentsByseq(seq,comments);
+    }
+
+    @Override
     public void deleteqna(QnA qna) { qar.delete(qna);}
 }

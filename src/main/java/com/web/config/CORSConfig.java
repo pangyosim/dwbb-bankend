@@ -10,6 +10,7 @@ public class CORSConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedMethods("*")
-                .allowedOrigins("https://dwbb.vercel.app/");
+                /*.allowedOrigins("http://localhost:3000");*/
+                .allowedOrigins("https://www.dwbb.online/");
     }
 }

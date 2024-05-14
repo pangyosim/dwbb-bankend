@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
-@CrossOrigin("https://dwbb.vercel.app/")
+@CrossOrigin("https://www.dwbb.online/")
 @RestController
 public class NoticeController {
     private final NoticeService ns;

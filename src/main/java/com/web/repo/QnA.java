@@ -38,4 +38,6 @@ public class QnA {
     @Column(name = "qnanickname", nullable = false)
     private String qnanickname;
 
+    @Column(name = "comments", nullable = true)
+    private String comments;
 }

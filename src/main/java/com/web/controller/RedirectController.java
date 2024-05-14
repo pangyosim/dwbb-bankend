@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class RedirectController {
     @GetMapping("/")
     public String MainRedirect() {
-        return "redirect:https://dwbb.vercel.app/";
+        return "redirect:https://www.dwbb.online/";
     }
 }

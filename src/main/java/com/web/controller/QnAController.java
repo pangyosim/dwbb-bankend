@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.transaction.Transactional;
 import java.util.Date;
 import java.util.List;
-@CrossOrigin("https://dwbb.vercel.app/")
+@CrossOrigin("https://www.dwbb.online/")
 @RestController
 public class QnAController {
 
@@ -58,5 +58,13 @@ public class QnAController {
     public String delete_qna_method(@RequestBody QnA qna){
         qas.deleteqna(qna);
         return "delete-success";
+    }
+
+    @PostMapping("/qna-comments")
+    @CrossOrigin
+    public String comments_qna_method(@RequestBody QnA qna){
+        System.out.println(qna);
+        qas.updatecommentsByseq(qna.getQnaseq(), qna.getComments());
+        return "comments-success";
     }
 }

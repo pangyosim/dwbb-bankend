@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 import com.web.repo.*;
-@CrossOrigin("https://dwbb.vercel.app/")
+@CrossOrigin("https://www.dwbb.online/")
 @RestController
 public class UserController {
     private final String securityKey = "myjwtkey";
