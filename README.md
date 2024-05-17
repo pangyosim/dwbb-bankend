@@ -10,8 +10,9 @@
 - 순서: 공공데이터 API → Naver Geolocation API → DB저장 <br>
     🟢 공공데이터 API 업데이트에 따라 맵에 표시되는 데이터도 다르므로, DB데이터보다 상시 요청이 더 낫다 판단하여 상시 API 데이터 요청.
 - request & response : Frontend(React)에서 현재 좌표값 요청시 Backend(Springboot)에서 내 근처 7km 이내 은행 대기인원 현황으로 응답.
-- key : application.properties 로 관리.
-🚨 API SERVER에서 ERROR 발생시 : try/catch로 jsonparse exception 발생시켜 서버에러값 응답.
+- key : application.properties 로 관리. <br>
+
+🚨 API SERVER ERROR 발생시 : try/catch로 jsonparse exception 발생시켜 서버에러값 응답.
 
 ```java
 package com.web.controller;
