@@ -92,7 +92,7 @@ public class MapController {
                     }
                 }
                 JSONArray res = new JSONArray();
-                if(!wait_arr.isEmpty()) {
+                if(wait_arr.size()>10) {
                     for (Object wait_obj : wait_arr) {
                         JSONObject wait_json_obj = (JSONObject) wait_obj;
                         for (Object tmp_obj : tmp_arr) {
@@ -115,7 +115,6 @@ public class MapController {
                 } else {
                     res.addAll(tmp_arr);
                 }
-                System.out.println(res);
                 return res;
             } catch (ParseException pe){
                 JSONArray API_err = new JSONArray();
