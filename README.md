@@ -7,12 +7,18 @@
 # 1.&nbsp; Springboot Controller
 #### ✅ &nbsp; MapController
 - Naver Maps에 Marker로 표시하기 위해 주소값을 좌표값으로 변경 후 DB에 데이터 주입
-- 순서: 공공데이터 API → Naver Geolocation API → DB저장 <br>
-    🟢 공공데이터 API 업데이트에 따라 맵에 표시되는 데이터도 다르므로, DB데이터보다 상시 요청이 더 낫다 판단하여 상시 API 데이터 요청.
-- request & response : Frontend(React)에서 현재 좌표값 요청시 Backend(Springboot)에서 내 근처 7km 이내 은행 대기인원 현황으로 응답.
-- key : application.properties 로 관리. <br>
+  
+- [데이터 처리순서] Data processing<br>
+  🟢 trans-bankdata 공공데이터 API → Naver Geolocation API → DB저장 <br>
+  1️⃣ 공공데이터 API 은행 대기인원 현황 은행 지점코드(brcd)로 DB데이터 SELECT <br>
+  2️⃣ Haversine 공식으로 내 근처 5km 이내 은행 데이터 준비. <br>
+  3️⃣ Frontend(React)로 내 근처 5km 이내 은행 대기인원 현황 JSON형식으로 response.<br>
+  🚨 API SERVER ERROR 발생시 : try/catch로 jsonparse exception 발생시켜 JSON데이터에 추가 후 응답. <br>
 
-🚨 API SERVER ERROR 발생시 : try/catch로 jsonparse exception 발생시켜 서버에러값 응답.
+- [요약] Summary<br>
+  Frontend(React)에서 현재 좌표값 요청시 Backend(Springboot)에서 내 근처 5km 이내 은행 대기인원 현황으로 응답.
+
+- 주요정보 (key) : application.properties로 관리. <br>
 
 ```java
 package com.web.controller;
