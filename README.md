@@ -485,9 +485,9 @@ public class NoticeController {
 
 #### ✅ &nbsp; QnAController
 - QnA , QnA 상세페이지, QnA등록페이지
-- 구성 : 공지사항 3row + QnA 7row 
+- 구성 : 공지사항 3row + QnA 5row , 작성완료 / 답변완료
 - USER : QnA등록, 본인이 작성한 글만 삭제 가능.
-- ADMIN : QnA등록, 모든 사람이 작성한 글 삭제 가능.
+- ADMIN : QnA등록, 모든 사람이 작성한 글 삭제 가능, QnA 댓글 달기 기능.
 
 ```java
 package com.web.controller;
