@@ -33,7 +33,6 @@ public class UserController {
         try {
             Date now = new Date();
             User login_result = us.loginCheckByIdPw(usr.getId(),usr.getPw());
-            System.out.println(login_result);
             if( login_result != null) {
                 String[] res_arr = new String[3];
                 res_arr[0] = login_result.getNickname();
@@ -104,7 +103,7 @@ public class UserController {
     }
     private Map<String, Object> createClaims(User user) {
         Map<String, Object> claims = new HashMap<>();
-        claims.put("pw", user.getPw()); // username
+        claims.put("id", user.getId()); // username
         claims.put("roles", user.getRole()); // 인가정보
         return claims;
     }
