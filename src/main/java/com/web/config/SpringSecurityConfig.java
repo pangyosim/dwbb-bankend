@@ -23,8 +23,11 @@ public class SpringSecurityConfig {
                 .antMatchers("/","/check-login","/signup","/check-email","/distinct-email",
                         "/notice-all","/notice-views","/notice-register","/notice-delete",
                         "/qna-all","/qna-views","/qna-register","/qna-delete","/qna-comments",
-                        "/bank-data","/trans-bank-data",
-                        "/park-data","/trans-park-data").permitAll()
+                        "/bank-data",
+                        "/park-data"
+//                        "/trans-bank-data",
+//                        "/trans-park-data"
+                ).permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .httpBasic();

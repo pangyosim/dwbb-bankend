@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 import com.web.repo.*;
-@CrossOrigin("https://www.dwbb.online/")
+//@CrossOrigin("https://www.dwbb.online/")
 @RestController
 @PropertySource("classpath:application.properties")
 public class UserController {
